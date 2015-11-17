@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html ng-app="till">
-<head>
-  <title>A Till for Charging Hipsters Money</title>
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/controllers/tillcontroller.js"></script>
-</head>
+  <head>
+    <title>A Till for Charging Hipsters Money</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/tillcontroller.js"></script>
+  </head>
 
-<body ng-controller="TillCtrl">
-{{1 + 1}}
-</body>
+  <body ng-controller="TillCtrl">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <button class="btn btn-default">Drinks</button>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-default">Cake</button>
+      </div>
+    </div>
+
+    <div class="row text-center" ng-show="">
+      <div class="col-md-4">
+        <button class="btn btn-default">Choc Mudcake</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Choc Mousse</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Affogato</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Tiramisu</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Blueberry Muffin</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Chocolate Chip Muffin</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Muffin Of The Day</button>
+      </div>
+    </div>
+
+    <div class="row text-center" ng-show="">
+      <div class="col-md-4">
+        <button class="btn btn-default">Cafe Latte</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Flat White</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Cappucino</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Single Espresso</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Double Espresso</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Americano</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Cortado</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-default">Tea</button>
+      </div>
+    </div>
+
+  </body>
 </html>
