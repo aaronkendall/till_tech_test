@@ -2,12 +2,13 @@ till.controller("TillCtrl", ['$scope', function($scope) {
 
   $scope.drinks = false;
   $scope.cakes = false;
+  $scope.receipt = false;
 
   $scope.total = 0;
 
   $scope.prices = [];
 
-  $scope.selection = {};
+  $scope.selection = [];
 
   $scope.menu = [
   {
@@ -37,14 +38,7 @@ till.controller("TillCtrl", ['$scope', function($scope) {
   ]
 
   $scope.addSelection = function(choice) {
-    if(choice in $scope.selection){
-      $scope.selection[choice] += $scope.menu[0].prices[0][choice];
-      $scope.selection['quantity'] ++;
-    } else {
-      $scope.selection[choice] = $scope.menu[0].prices[0][choice];
-      $scope.selection['quantity'] = 1;
-    };
-    console.log($scope.selection)
+    $scope.selection.push({['name']: choice, ['price']: $scope.menu[0].prices[0][choice], ['quantity']: 1});
   }
 
   $scope.calculateTotal = function() {
@@ -63,6 +57,10 @@ till.controller("TillCtrl", ['$scope', function($scope) {
   $scope.toggleCakes = function() {
     $scope.cakes = !$scope.cakes;
     $scope.drinks = false;
+  };
+
+  $scope.showReceipt = function() {
+    $scope.receipt = !$scope.receipt;
   };
 
 }]);

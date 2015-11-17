@@ -18,6 +18,9 @@
         <button class="btn btn-default" ng-click="toggleCakes()">Cake</button>
       </div>
     </div>
+    <div class="row text-center">
+      <button class="btn btn-default" ng-click="showReceipt()">Show Receipt</button>
+    </div>
 
     <div class="row text-center" ng-show="cakes">
       <div class="col-md-4">
@@ -67,6 +70,14 @@
       </div>
       <div class="col-md-4">
         <button class="btn btn-default" ng-click="addSelection('Tea')">Tea</button>
+      </div>
+    </div>
+
+    <div class="row" ng-show="receipt">
+      <div class="col-md-12" ng-repeat="item in selection">
+        <div class="col-md-4">
+          {{ item.name }}, {{ item.price }}
+        </div>
       </div>
     </div>
 
